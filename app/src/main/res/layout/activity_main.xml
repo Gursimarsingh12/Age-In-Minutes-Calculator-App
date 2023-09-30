@@ -1,18 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--LinearLayout is a type of ViewGroup that arranges its child views in a linear, single-directional layout—either horizontally or vertically-->
+<!-- "gravity" attribute is used to control the alignment or positioning of a View or ViewGroup within its parent View or ViewGroup -->
+<!--Orientation means whether it should be hotizontal or vertical-->
+<!--Padding is the space between the content (such as text or an image) and the outer edges of the View's background or border-->
+<!--match_parent attribute is used to specify that a View should occupy as much space as its parent allows in the dimension (width or height) to which it is applied. This attribute is commonly used to make a View fill the available space within its parent container.-->
+<!--android:backgroundTint attribute is used to specify the background tint color of a View or ViewGroup. The background tint color is applied to the background drawable of the View, altering its appearance by tinting it with the specified color.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/bgColor"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:text="CALCULATE YOUR"
+        android:textColor="#031788"
+        android:textColorHighlight="#770C0C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="AGE"
+        android:background="#000000"
+        android:textColor="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColorHighlight="#770C0C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="IN MINUTES"
+        android:textColor="#1E0D83"
+        android:textColorHighlight="#770C0C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Select Date"
+        android:textSize="30sp"
+        android:textColor="@color/buttontextColor"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        >
+    </Button>
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="07-01-2006"
+        android:textColor="#A82727"
+        android:textColorHighlight="#770C0C"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SELECTED DATE"
+        android:textColor="@color/buttontextColor"
+        android:textColorHighlight="#770C0C"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="123245"
+        android:textColor="#A82727"
+        android:textColorHighlight="#770C0C"
+        android:paddingTop="20dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Minutes"
+        android:textColor="@color/buttontextColor"
+        android:textColorHighlight="#770C0C"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
