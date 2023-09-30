@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val tvOutput:TextView = findViewById(R.id.tvOutput)
         val dpd = DatePickerDialog(this,
             { _, selectedYear, selectedMonth, selectedDayOfMonth ->
-                // Toast.makeText(this, "Your selected date was $selectedDayOfMonth-${selectedMonth+1}-$selectedYear", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Your selected date was $selectedDayOfMonth-${selectedMonth+1}-$selectedYear", Toast.LENGTH_SHORT).show()
                 val selectedDate = "$selectedDayOfMonth/${selectedMonth+1}/$selectedYear"
                 tvSelectedDate.text = selectedDate
                 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
