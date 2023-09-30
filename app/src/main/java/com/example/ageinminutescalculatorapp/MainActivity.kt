@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val dpd = DatePickerDialog(this,
             { _, selectedYear, selectedMonth, selectedDayOfMonth ->
                 // Toast.makeText(this, "Your selected date was $selectedDayOfMonth-${selectedMonth+1}-$selectedYear", Toast.LENGTH_SHORT).show()
-                val selectedDate = "$selectedDayOfMonth$/{selectedMonth+1}/$selectedYear"
+                val selectedDate = "$selectedDayOfMonth/${selectedMonth+1}/$selectedYear"
                 tvSelectedDate.text = selectedDate
                 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
                 val theDate = sdf.parse(selectedDate)  // .parse() function for various purposes, such as parsing strings into different data types or objects
